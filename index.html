@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="./style.css">
+    <title>Static</title>
+</head>
+<body>
+    <header>
+        <nav id="nav">
+            <ul>
+                <li>
+                    <a id="logo" href="#landing">SG</a>
+                </li>
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <a href="#shop">Shop</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="landing" class="landing">
+            <div class="content">
+                <h1>Small Guys Clothing.</h1>
+                <p>Small guys is still guys,</p>
+                <p>your height can't stop your fashion.</p>
+                <a href="#home">
+                    <button>Learn More</button>
+                </a>
+            </div>
+            <ul class="links">
+                <li><a href=""><img src="./images/facebook.png" alt=""></a></li>
+                <li><a href=""><img src="./images/twitter.png" alt=""></a></li>
+                <li><a href=""><img src="./images/instagram.png" alt=""></a></li>
+            </ul>
+        </div>
+        
+    </header>
+    <main>
+         <!-- Home Page -->
+        <section id="home" class="home">
+            <div class="homeGallery">
+                <img src="./images/homeImg1.jpeg" alt="">
+                <img src="./images/homeImg2.jpeg" alt="">
+                <img src="./images/homeImg3.jpeg" alt="">
+                <img src="./images/homeImg5.jpeg" alt="">
+                
+                <img src="./images/homeImg4.jpeg" alt="">
+                <img src="./images/homeImg6.jpeg" alt="">
+                
+            </div>
+            <div class="homeCont">
+                <h2>Fashion isn't just for Gender equality only.</h2>
+                <p>We are here to offer you a quality clothing for all the people who are not gifted with extra height. Fashion is something you shouldn't takes place and height shouldn't be a hindrance to it, with our innovative and compitent millenials staff we are creating a trendy, high quality and height friendly clothing, like us on our social media site and be updated with our Clothing.</p>
+                <a href="">
+                <button>Sign Up.</button>
+                </a>
+            </div>
+        </section>
+        <!-- About Page -->
+        <section id="about" class="about">
+            <div class="aboutCont">
+                <h2>About Us.</h2>
+                <p>This is our story <em>Small Guys Clothing</em> started in October 21, 2019, founded by Mr. <strong>Gerardo S. Malasig Jr.</strong> a Filipino arts enthusiast he is also a fan of Fashion where for him it is also an Art of expressing of feelings, but like most of the typical Filipino, he's hight is a hindrance to this because most of the clothing brand in malls cater only tall guys, that is why he came up with this Idea and create a clothing line for Filipinos who are not gifted with height and other people around the world in the Future, he maybe optimistic but this is he's dream and nothing can stop him and so are you?</p>
+            </div>
+            <div class="aboutCeo">
+                <img src="./images/aboutImg.jpeg" alt="">
+            </div>
+        </section>
+        <!-- Projects Page -->
+        <section id="shop" class="shop">
+            <div class="adds">
+                <div class="add1 add">
+                    <a href="">Shoes</a>
+                </div>
+                <div class="add2 add">
+                    <a href="">Clothing</a>
+                </div>
+                <div class="add3 add">
+                    <a href="">Accessories</a>
+                </div>
+                <div class="add4 add">
+                    <a href="">Bestsellers</a>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="featCont">
+                    <h2>SG Charcoal Backpack</h2>
+                    <p>Any city. Any direction. Any Weather</p>
+                    <button>Shop Men's</button>
+                    <button>Shop Women's</button>
+                </div>
+                <div class="featImg">
+                        <img src="./images/featImg.jpeg" alt="">
+                </div>
+               
+            </div>
+        
+        </section>
+        <!-- Contact Page -->
+        <section id="contact" class="contact">
+            <div class="contactCont">
+                <h2>Message Us.</h2>
+                <p><strong>Contact:</strong> (02)999-9999</p>
+                <p><strong>Send SMS:</strong> 0999-990-009</p>
+                <p><strong>Email:</strong> info_smallguys@smallguys.ph</p>
+            </div>
+            <div class="allRights">
+                <h2>Small Guys Clothing. </h2>
+                <p>All rights reserve &copy; 2019</p>
+            </div>
+        
+        </section>
+    </main>
+
+<script>
+let nav = document.querySelector('#nav');
+let last_known_scroll_position = 0;
+let ticking = false;
+
+function doSomething(scroll_pos) {
+    if(scroll_pos > 0){
+        nav.classList.add("navScroll")
+    }else {
+        nav.classList.remove("navScroll")
+    }
+    
+    
+}
+
+window.addEventListener('scroll', function(e) {
+  last_known_scroll_position = window.scrollY;
+
+  if (!ticking) {
+    window.requestAnimationFrame(function() {
+      doSomething(last_known_scroll_position);
+      ticking = false;
+    });
+
+    ticking = true;
+  }
+});
+</script>
+</body>
+</html>
